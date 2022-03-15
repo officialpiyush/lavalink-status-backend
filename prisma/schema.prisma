@@ -7,7 +7,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Stats {
+model stats {
   id                Int     @unique @default(autoincrement())
   name              String? @default("Lavalink Server")
   ip                String
