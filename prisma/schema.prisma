@@ -14,10 +14,10 @@ model Stats {
   status            Int
   players           Int
   playing_players   Int
-  uptime            Int
+  uptime            BigInt
   cores             Int
-  memory_usage      Int
-  memory_reservable Int
-  system_load       Int
-  load              Int
+  memory_usage      BigInt
+  memory_reservable BigInt
+  system_load       BigInt
+  load              BigInt
 }
