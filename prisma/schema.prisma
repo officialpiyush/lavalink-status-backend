@@ -18,6 +18,6 @@ model Stats {
   cores             Int
   memory_usage      BigInt
   memory_reservable BigInt
-  system_load       BigInt
-  load              BigInt
+  system_load       Decimal
+  load              Decimal
 }
