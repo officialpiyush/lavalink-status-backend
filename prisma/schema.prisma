@@ -7,9 +7,17 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model nodes {
+  id         Int       @unique @default(autoincrement())
+  name       String?   @default("Lavalink Server")
+  ip         String    @unique
+  created_at DateTime? @default(now())
+  stats      stats[]
+}
+
 model stats {
-  id                Int     @unique @default(autoincrement())
-  name              String? @default("Lavalink Server")
+  id                Int       @unique @default(autoincrement())
+  name              String?   @default("Lavalink Server")
   ip                String
   status            Int
   players           Int
@@ -20,4 +28,7 @@ model stats {
   memory_reservable BigInt
   system_load       Decimal
   load              Decimal
+  recorded_at       DateTime? @default(now())
+
+  nodeIp nodes @relation(fields: [ip], references: [ip])
 }
