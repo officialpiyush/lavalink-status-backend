@@ -4,6 +4,8 @@ config()
 import express from "express";
 import cors from "cors";
 
+import "./lib/bot";
+
 const app = express();
 
 app.use(cors());

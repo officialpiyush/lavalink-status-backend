@@ -1,0 +1,10 @@
+export default {
+    nodes: [
+        {
+            identifier: "", // you may want to fill this in
+            host: "localhost", // Optional if Lavalink is local
+            port: 2333, // Optional if Lavalink is set to default
+            password: "youshallnotpass", // Optional if Lavalink is set to default
+        },
+    ]
+}
