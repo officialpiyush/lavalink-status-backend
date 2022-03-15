@@ -38,6 +38,21 @@ async function addDataOfNode(node: Node) {
     const systemLoad = node.stats.cpu.systemLoad;
     const lavalinkLoad = node.stats.cpu.lavalinkLoad;
 
+    const hasIp = await prisma.nodes.findUnique({
+        where: {
+            ip
+        }
+    });
+
+    if (!hasIp) {
+        await prisma.nodes.create({
+            data: {
+                name: node.options.identifier,
+                ip
+            }
+        })
+    }
+
     await prisma.stats.create({
         data: {
             name: identifier,
