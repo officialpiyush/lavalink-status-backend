@@ -75,7 +75,7 @@ discordClient.on("ready", () => {
     manager.init(discordClient.user?.id);
 
     collectDataFromNodes();
-    setInterval(collectDataFromNodes, 5000);
+    setInterval(collectDataFromNodes, 6 * 10000);
 });
 
 
