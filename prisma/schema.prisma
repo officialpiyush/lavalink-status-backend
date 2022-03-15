@@ -8,15 +8,16 @@ datasource db {
 }
 
 model Stats {
-  id              Int     @unique @default(autoincrement())
-  name            String? @default("Lavalink Server")
-  ip              String
-  status          Int
-  players         Int
-  playing_players Int
-  uptime          Decimal
-  cores           Int
-  memory_usage    Float
-  system_load     Float
-  load            Float
+  id                Int     @unique @default(autoincrement())
+  name              String? @default("Lavalink Server")
+  ip                String
+  status            Int
+  players           Int
+  playing_players   Int
+  uptime            Decimal
+  cores             Int
+  memory_usage      Float
+  memory_reservable Float
+  system_load       Float
+  load              Float
 }
